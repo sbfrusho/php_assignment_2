@@ -108,8 +108,8 @@
                             <input type="text" id="isbn" name="isbn" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="isbn" class="form-label">Author:</label>
-                            <input type="text" name="available" id="available" class="form-control" required>
+                            <label for="available" class="form-label">Available:</label>
+                            <input type="available" name="available" id="available" class="form-control" required>
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Store Book</button>
@@ -120,6 +120,10 @@
                 <div class="card">
                     <h2 class="card-title">Customer Form</h2>
                     <form action="store_customer.php" method="post">
+                    <div class="form-group">
+                            <label for="customerId" class="form-label">customer_id:</label>
+                            <input type="text" name="customer_id" id="customer_id" class="form-control" placeholder="ID" required>
+                        </div>
                         <div class="form-group">
                             <label for="firstName" class="form-label">First Name:</label>
                             <input type="text" id="firstName" name="firstName" class="form-control" required>
@@ -131,10 +135,6 @@
                         <div class="form-group">
                             <label for="email" class="form-label">Email:</label>
                             <input type="email" id="email" name="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="isbn" class="form-label">Author:</label>
-                            <input type="text" name="available" id="available" class="form-control"required>
                         </div>
                         <button type="submit" class="btn btn-primary">Store Customer</button>
                     </form>
