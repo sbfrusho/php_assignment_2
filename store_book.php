@@ -45,7 +45,7 @@
         $title = $_POST["title"];
         $author = $_POST["author"];
         $isbn = $_POST["isbn"];
-        $available = $_POST["available"]; // Added this line
+        $available = $_POST["available"];
         
         $file = fopen("books.txt", "a");
         fwrite($file, "Title: " . $title . ", Author: " . $author . ", ISBN: " . $isbn . ", Available: " . $available . PHP_EOL);

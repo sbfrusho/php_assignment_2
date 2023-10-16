@@ -94,7 +94,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="card">
                     <h2 class="card-title">Book Form</h2>
-                    <form action="store_book.php" method="post">
+                    <form action="process.php" method="post">
                         <div class="form-group">
                             <label for="title" class="form-label">Title:</label>
                             <input type="text" id="title" name="title" class="form-control" required>
@@ -119,7 +119,7 @@
             <div class="col-sm-12 col-md-6">
                 <div class="card">
                     <h2 class="card-title">Customer Form</h2>
-                    <form action="store_customer.php" method="post">
+                    <form action="process.php" method="post">
                     <div class="form-group">
                             <label for="customerId" class="form-label">customer_id:</label>
                             <input type="text" name="customer_id" id="customer_id" class="form-control" placeholder="ID" required>

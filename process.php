@@ -7,8 +7,26 @@
 </head>
 <body>
     <div class="container mt-5">
-        <?php if (isset($_POST['isbn']) && isset($_POST['title']) && isset($_POST['author']) && isset($_POST['available'])): ?>
-            <h2>Book</h2>
+        <?php
+        require 'Book.php'; // Include the Book class
+        require 'Customer.php';
+         // Include the Customer class
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['isbn']) && isset($_POST['title']) && isset($_POST['author']) && isset($_POST['available'])) {
+                // Create a Book instance and set the data
+                $book = new Book($_POST['isbn'], $_POST['title'], $_POST['author'], $_POST['available']);
+            }
+
+            if (isset($_POST['customer_id']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email'])) {
+                // Create a Customer instance and set the data
+                $customer = new Customer($_POST['customer_id'], $_POST['first_name'], $_POST['last_name'], $_POST['email']);
+            }
+        }
+        ?>
+
+        <?php if (isset($book)): ?>
+            <h2>Book Data</h2>
             <table class="table">
                 <tr>
                     <th>ISBN</th>
@@ -17,16 +35,16 @@
                     <th>Available</th>
                 </tr>
                 <tr>
-                    <td><?= $_POST['isbn'] ?></td>
-                    <td><?= $_POST['title'] ?></td>
-                    <td><?= $_POST['author'] ?></td>
-                    <td><?= $_POST['available'] ?></td>
+                    <td><?= $book->getIsbn() ?></td>
+                    <td><?= $book->getTitle() ?></td>
+                    <td><?= $book->getAuthor() ?></td>
+                    <td><?= $book->getAvailable() ?></td>
                 </tr>
             </table>
         <?php endif; ?>
 
-        <?php if (isset($_POST['customer_id']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email'])): ?>
-            <h2>Customer</h2>
+        <?php if (isset($customer)): ?>
+            <h2>Customer Data</h2>
             <table class="table">
                 <tr>
                     <th>ID</th>
@@ -35,10 +53,10 @@
                     <th>Email</th>
                 </tr>
                 <tr>
-                    <td><?= $_POST['customer_id'] ?></td>
-                    <td><?= $_POST['first_name'] ?></td>
-                    <td><?= $_POST['last_name'] ?></td>
-                    <td><?= $_POST['email'] ?></td>
+                    <td><?= $customer->getId() ?></td>
+                    <td><?= $customer->getFirstName() ?></td>
+                    <td><?= $customer->getLastName() ?></td>
+                    <td><?= $customer->getEmail() ?></td>
                 </tr>
             </table>
         <?php endif; ?>
