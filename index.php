@@ -122,7 +122,7 @@
                     <form action="process.php" method="post">
                     <div class="form-group">
                             <label for="customerId" class="form-label">customer_id:</label>
-                            <input type="text" name="customer_id" id="customer_id" class="form-control" placeholder="ID" required>
+                            <input type="text" name="customer_id" id="customer_id" class="form-control"  required>
                         </div>
                         <div class="form-group">
                             <label for="firstName" class="form-label">First Name:</label>
@@ -145,7 +145,7 @@
 
     <h2>Read Data</h2>
     <div class="button-container">
-        <a href="read_customer.php" class="custom-button">Customer Info</a>
+        <a href="read_customer.php" class=".btn-primary">Customer Info</a>
         <a href="read_books.php" class="custom-button">Books Info</a>
     </div>
 </body>
