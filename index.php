@@ -145,7 +145,7 @@
 
     <h2>Read Data</h2>
     <div class="button-container">
-        <a href="read_customer.php" class=".btn-primary">Customer Info</a>
+        <a href="read_customer.php" class="custom-button">Customer Info</a>
         <a href="read_books.php" class="custom-button">Books Info</a>
     </div>
 </body>

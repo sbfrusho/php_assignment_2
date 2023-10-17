@@ -18,9 +18,9 @@
                 $book = new Book($_POST['isbn'], $_POST['title'], $_POST['author'], $_POST['available']);
             }
 
-            if (isset($_POST['customer_id']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email'])) {
+            if (isset($_POST['customer_id']) && isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email'])) {
                 // Create a Customer instance and set the data
-                $customer = new Customer($_POST['customer_id'], $_POST['first_name'], $_POST['last_name'], $_POST['email']);
+                $customer = new Customer($_POST['customer_id'], $_POST['firstName'], $_POST['lastName'], $_POST['email']);
             }
         }
         ?>
